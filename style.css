@@ -1,0 +1,795 @@
+/* MOBILSITE  forside */
+
+* {
+  box-sizing: border-box;
+}
+
+/* fået hjælp af chatgpt, da jeg gerne ville have min skærm skulle have en max width 1200px */
+body {
+  margin: 0; /* Fjern standardmargen */
+  padding: 0; /* Fjern standardpadding */
+  overflow-x: hidden;
+  background-color: #a9a9a9; /* Baggrund uden for 1200px */
+}
+
+/* fået hjælp af chatgpt, da jeg gerne ville have min skærm skulle have en max width 1200px */
+
+main {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #f6f6f6; /* Baggrundsfarve inden for synligt område */
+  /* Minimumshøjde for at vise baggrundsfarven */
+  box-sizing: border-box; /* Sikrer, at padding og border tælles med i højden */
+  padding: 20px; /* Tilføjelse af indvendig plads kan også hjælpe med at vise baggrundsfarven */
+}
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/****************************** HEADER  ********************************/
+
+header {
+  display: flex;
+  justify-content: flex-end; /* Placerer menuen til højre */
+  align-items: center;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  font-family: "poppins", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end; /* Placerer menuen til højre */
+}
+
+.menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  margin-right: 20px;
+}
+
+.menu li:last-child {
+  margin-right: 0;
+}
+
+.menu a {
+  display: block;
+  padding: 10px;
+  color: #6d3636;
+  text-decoration: none;
+  transition: color 0.3s;
+  text-align: end;
+}
+
+.menu a:hover {
+  color: #f0a1a1;
+}
+
+.burger {
+  width: 30px;
+  height: 20px;
+  cursor: pointer;
+  display: none;
+}
+
+.burger .line {
+  width: 100%;
+  height: 2px;
+  background-color: #6d3636;
+  margin-bottom: 5px;
+  transition: 0.2s linear;
+}
+
+@media screen and (max-width: 800px) {
+  .menu {
+    display: none;
+  }
+
+  .burger {
+    display: block;
+    order: 1; /* Skifter burger-ikonet til højre */
+  }
+
+  .burger.active .line:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+    transition: 0.2s linear;
+  }
+
+  .burger.active .line:nth-child(2) {
+    opacity: 0;
+    transition: 0.15s linear;
+  }
+
+  .burger.active .line:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+    transition: 0.2s linear;
+  }
+
+  nav.active .menu {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    position: absolute;
+    top: 60px;
+    right: 0; /* Placerer menuen i toppen til højre */
+    background-color: #efede6;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+  }
+
+  nav.active .menu li {
+    margin: 10px 20px;
+  }
+
+  nav.active .menu a {
+    font-size: 24px;
+    text-align: right;
+  }
+}
+
+/* ******footer*****' */
+
+footer {
+  display: flex;
+  justify-content: center;
+  color: white;
+  background-color: #a79e9e;
+}
+
+/* **************** Skrift typer************ */
+
+.overskrift2 {
+  display: flex;
+  flex-direction: column;
+  font-size: 23px;
+  margin-top: 8rem;
+  align-items: center;
+  font-family: "Antic Didone", serif;
+}
+
+.overskrift3 {
+  font-size: 16px;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  font-family: "Antic Didone", serif;
+  font-size: 23px;
+}
+
+h2 {
+  font-family: "Charmonman", cursive;
+}
+
+p {
+  font-family: "Arapey", serif;
+}
+
+/**************' til på flere sider**************** */
+
+/*giver plads på mobilsite */
+
+.rum {
+  margin-top: 71px;
+  margin-bottom: -13px;
+}
+
+.rum2 {
+  margin-bottom: 16px;
+  margin-top: 47px;
+}
+
+/************************************ HALVCIRKEL OG FIRKANT ************************************ */
+
+.container {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+}
+
+.halvcirkel {
+  width: 161%;
+  position: relative;
+  top: 166px;
+  left: 51px;
+}
+
+.ramme {
+  position: absolute;
+  top: 178px;
+  width: 156%;
+  left: 60px;
+}
+
+@media only screen and (max-width: 800px) {
+  /* Skjul intro_ramme på mobilen */
+  .intro {
+    display: none;
+  }
+}
+
+/* ****************************STJERNER - forside******************************* */
+
+.stjerne1 {
+  position: absolute;
+  top: 63px;
+  left: 22rem;
+  width: 44px;
+}
+
+.stjerne2 {
+  position: absolute;
+  top: 63px;
+  left: 24rem;
+  width: 18px;
+}
+
+/*********************************tekst ********************************/
+
+.Port {
+  position: absolute;
+  top: 5rem;
+  font-size: 5rem;
+  left: 3rem;
+  color: #625346;
+}
+
+.folio {
+  position: absolute;
+  top: 25rem;
+  font-size: 5rem;
+  left: 17rem;
+  color: #4c4036;
+}
+
+/************** mobilsite portfolio **********/
+
+/* indholdsfortegnelse er taget fra codepen "Wiki TOC Enumeration with CSS Counters"
+af: Alex Raven */
+.indholdsfortegnelse {
+  line-height: 154px;
+  margin-left: 47px;
+  background-color: #dad0c6;
+  margin-right: 59px;
+  margin-top: 52px;
+}
+
+.indholdsfortegnelse ul {
+  list-style: none;
+}
+
+.indholdsfortegnelse a {
+  border-bottom: 1px dashed transparent;
+  color: #888;
+  font-size: 17px;
+  font-style: italic;
+  font-weight: normal;
+  margin-left: 10px;
+  text-decoration: none;
+  transition: all 0.2s linear 0s;
+}
+
+.indholdsfortegnelse a:hover {
+  border-bottom: 1px dashed #ddd;
+  color: #000;
+}
+
+.overskrift {
+  position: relative;
+  top: 24px;
+  left: 156px;
+  color: #aaa;
+  font-size: 30px;
+  line-height: 40px;
+  font-style: italic;
+  font-weight: 200;
+  text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.7);
+}
+
+@media only screen and (min-width: 800px) {
+  /* Skjul kasse på desktop */
+  .kasse {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  /* Skjul wrapper på mobilen */
+  .wrapper {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  /* Skjul blaa på mobilen */
+  .blaa {
+    display: none;
+  }
+}
+/******** mobilsite tema 02****** */
+
+.tema02_1-1 {
+  margin-top: 3rem;
+  padding: 0 20px; /* Tilføjer polstring på siderne for at skabe plads til indholdet */
+  line-height: 2;
+  box-sizing: border-box; /* Sikrer, at padding inkluderes i elementets bredde */
+}
+
+.web3 img {
+  width: 300px; /* tager fat i alle billeder under klassen web3 */
+}
+
+.img3 {
+  margin-bottom: 20px; /* skaber mere plads imellem img3 og img4 */
+}
+
+/*************** 03 mobilsite********************* */
+
+.img_1-1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.tema03_1-1 {
+  margin-top: 3rem;
+  padding: 0 20px;
+  line-height: 2;
+  box-sizing: border-box;
+  display: grid;
+  gap: 20px;
+}
+
+.u_1-1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 10px;
+  margin-top: 22px;
+}
+
+/* ******** 04 mobilsite**************** */
+
+/* ************05 movilsite ****************** */
+
+/* *********'om mig mobilsite **********************' */
+
+/*----------------------------------- desktop------------------------------------- */
+@media screen and (min-width: 600px) {
+  /************************** header**************************/
+
+  header {
+    display: flex;
+    justify-content: flex-end; /* Placerer menuen til højre */
+    align-items: center;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-family: "poppins", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+  }
+
+  nav {
+    display: flex;
+    margin: 0 auto;
+  }
+
+  .menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 43px;
+  }
+
+  .menu li {
+    margin-right: 20px;
+  }
+
+  .menu li:last-child {
+    margin-right: 0;
+  }
+
+  .menu a {
+    display: block;
+    padding: 10px;
+    color: #6d3636;
+    text-decoration: none;
+    transition: color 0.3s;
+    text-align: end;
+  }
+
+  .menu a:hover {
+    color: #f0a1a1;
+  }
+
+  /************************' footer  *************************/
+
+  .footer {
+    width: 1200px;
+    margin-left: 119px;
+    display: flex;
+    background-color: #a79e9e;
+    text-align: center;
+    margin-top: 0px;
+  }
+
+  /****************************** generelle************** */
+
+  .rum {
+    margin-top: 143px;
+    margin-bottom: -11px;
+    margin-left: 199px;
+  }
+
+  .overskrift2 {
+    display: flex;
+    flex-direction: column;
+    font-size: 23px;
+    margin-top: 8rem;
+    align-items: center;
+    font-family: "Antic Didone", serif;
+  }
+
+  .overskrift3 {
+    font-size: 16px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
+
+  h1 {
+    font-family: "Antic Didone", serif;
+    font-size: 23px;
+  }
+
+  h2 {
+    font-family: "Charmonman", cursive;
+  }
+
+  p {
+    font-family: "Arapey", serif;
+  }
+
+  /******** forside************ */
+  .alt {
+    position: absolute;
+    left: 87px;
+  }
+
+  .container {
+    position: absolute;
+    width: 256px;
+    height: 200px;
+    left: 368px;
+  }
+
+  .intro {
+    position: absolute;
+    width: 527px;
+    top: 153px;
+  }
+
+  .Port {
+    position: absolute;
+    top: 7rem;
+    font-size: 6rem;
+    left: 21rem;
+    color: #625346;
+  }
+
+  .folio {
+    position: absolute;
+    top: 15rem;
+    font-size: 5rem;
+    left: 21rem;
+    color: #4c4036;
+  }
+
+  .stjerne1 {
+    position: absolute;
+    top: 126px;
+    left: 57rem;
+    width: 44px;
+  }
+  .stjerne2 {
+    position: absolute;
+    top: 120px;
+    left: 59rem;
+    width: 18px;
+  }
+
+  /* hjælp fra chatgpt */
+  .custom-line1 {
+    border: none; /* Fjern standardborderet */
+    border-top: 2px solid #5d4f42; /* Ændr tykkelsen, stilen og farven efter ønske */
+    width: 62%; /* Ændr bredden af linjen efter ønske */
+    float: right;
+    position: relative;
+    top: 5rem;
+    left: 29rem;
+  }
+
+  .custom-line2 {
+    border: none; /* Fjern standardborderet */
+    border-top: 2px solid #5d4f42; /* Ændr tykkelsen, stilen og farven efter ønske */
+    width: 69%;
+    position: relative;
+    top: 661px;
+    left: -393px;
+  }
+
+  /* ***************************************Portfolio ***************************************************/
+
+  /*****fået hjælp af: https://www.youtube.com/watch?v=7HPsdVQhpRw og Chatgpt**** */
+  .portfolio {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+  }
+
+  .wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .carousel-container {
+    position: relative;
+    overflow: hidden; /* Sørg for at skjule knapper, der går ud over containerens bredde */
+  }
+
+  #prevBtn {
+    /* Stil for venstre knap */
+    height: 46px;
+    width: 46px;
+    text-align: center;
+    list-style: none;
+    line-height: 46px;
+    background-color: #ddd;
+    cursor: pointer;
+    font-size: 1.2rem;
+    position: absolute;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 14rem;
+    z-index: 1;
+  }
+
+  #nextBtn {
+    /* Stil for højre knap */
+    height: 46px;
+    width: 46px;
+    text-align: center;
+    list-style: none;
+    line-height: 46px;
+    background-color: #ddd;
+    cursor: pointer;
+    font-size: 1.2rem;
+    position: absolute;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%); /* Centrerer lodret */
+    right: 19rem;
+    z-index: 1; /* Sørger for at knappen ligger over billeder */
+  }
+
+  .carousel {
+    display: flex;
+    gap: 5px;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+    top: 186px;
+    left: -19%;
+    transition: transform 0.5s ease; /* Tilføjer en glidende overgang til rulning */
+    transform: translateX(0); /* Startposition */
+    /* Juster denne værdi efter behov */
+  }
+
+  .wrapper .carousel {
+    display: flex;
+    justify-content: space-between;
+    gap: 5px;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+    left: -212px;
+  }
+  .carousel img {
+    width: 260px;
+    height: auto;
+  }
+
+  .carousel img:first-child {
+    margin-left: 410px;
+  }
+  /* ----------------------------------------------------- */
+
+  /* firkant */
+  .firkant {
+    background-color: #dad0c6;
+    padding: 2rem 1.5rem;
+    margin-top: 19rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .img_om_mig {
+    width: 228px;
+    margin-left: 133px;
+  }
+
+  /*******************************************02********************************************** */
+
+  .tema02_1-1 {
+    margin-top: -2rem; /*  får rykket lidt ned på selve siden, så det ikke lå lige op af overskriften */
+    padding: 23px;
+    margin-left: -17px;
+  }
+  .grund_web {
+    margin-left: 25rem;
+  }
+  .web1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 66px;
+    /* tekst */
+    text-align: center; /* får teksten til at starte i midten, og ikke ude i siden  */
+
+    line-height: 3; /* mellemrum mellem linjerne  */
+    font-size: 17px;
+    gap: 20px;
+  }
+
+  .web1 p {
+    background-color: #eceaea;
+    margin-top: 2px; /* så baggrundsfarven blev lige med billedet*/
+    margin-bottom: 0px; /* så baggrundsfarven blev lige med billedet*/
+    margin-left: 12px;
+  }
+
+  .web1 img {
+    width: 499px;
+    margin-left: 56px;
+  }
+
+  /* ---- */
+
+  .web2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 66px;
+    line-height: 3; /* mellemrum mellem linjerne  */
+    font-size: 17px;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .web2 p {
+    background-color: #eceaea;
+    margin-top: 2px; /* så baggrundsfarven blev lige med billedet*/
+    margin-bottom: 0px; /* så baggrundsfarven blev lige med billedet*/
+    margin-left: -26px;
+  }
+  .web2 img {
+    width: 499px;
+    margin-left: 10px;
+  }
+  .stil {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 207px;
+    margin-left: 35rem;
+    margin-bottom: -28px;
+  }
+
+  .order {
+    order: -1; /* bytter om på billede og tekst */
+  }
+
+  /* ---- */
+
+  .web3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 66px;
+    line-height: 3; /* mellemrum mellem linjerne  */
+    font-size: 17px;
+    text-align: center;
+  }
+
+  .web3 p {
+    background-color: #eceaea;
+    margin-top: 2px; /* så baggrundsfarven blev lige med billedet*/
+    margin-bottom: 0px; /* så baggrundsfarven blev lige med billedet*/
+    width: 197%; /* Justeret størelsen på kassen*/
+    margin-left: 12px;
+  }
+
+  .knap {
+    margin-top: 207px;
+    margin-left: 7rem;
+    margin-bottom: -28px;
+  }
+
+  .web3 img {
+    margin-left: 268px; /* rykker billederne mere til venstre */
+  }
+
+  .web3 .img3 {
+    margin-right: 56px; /* Juster denne værdi for at reducere mellemrummet */
+  }
+
+  .web3 .img4 {
+    margin-left: -33px; /* Juster denne værdi for at reducere mellemrummet */
+  }
+
+  /* ----------------Hover --------- */
+
+  .img1 {
+    filter: grayscale(1) brightness(0.5);
+    /* border-radius: 5px; gør kanterne lidt runde*/
+    cursor: pointer;
+    transition: 0.3s linear;
+  }
+
+  .img1:hover {
+    filter: grayscale(0);
+  }
+
+  .img2 {
+    filter: grayscale(1) brightness(0.5);
+    /* border-radius: 5px; gør kanterne lidt runde*/
+    cursor: pointer;
+    transition: 0.3s linear;
+  }
+
+  .img2:hover {
+    filter: grayscale(0);
+  }
+
+  .img3 {
+    filter: grayscale(1) brightness(0.5);
+    /* border-radius: 5px; gør kanterne lidt runde*/
+    cursor: pointer;
+    transition: 0.3s linear;
+  }
+
+  .img3:hover {
+    filter: grayscale(0);
+  }
+
+  .img4 {
+    filter: grayscale(1) brightness(0.5);
+    /* border-radius: 5px; gør kanterne lidt runde*/
+    cursor: pointer;
+    transition: 0.3s linear;
+  }
+
+  .img4:hover {
+    filter: grayscale(0);
+  }
+
+  /* ***********************03********************************************** */
+
+  .u0 {
+  }
+}
