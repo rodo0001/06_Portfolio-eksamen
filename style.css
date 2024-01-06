@@ -1,18 +1,32 @@
 /* MOBILSITE  forside */
 
+/******* Reset *********/
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
+}
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+@media only screen and (max-width: 767px) {
+  img {
+    width: 100%;
+  }
 }
 
 /* fået hjælp af chatgpt, da jeg gerne ville have min skærm skulle have en max width 1200px */
 body {
-  margin: 0; /* Fjern standardmargen */
-  padding: 0; /* Fjern standardpadding */
+  margin: 0; /* Fjerner standardmargen */
+  padding: 0; /* Fjerner standardpadding */
   overflow-x: hidden;
   background-color: #a9a9a9; /* Baggrund uden for 1200px */
 }
 
-/* fået hjælp af chatgpt, da jeg gerne ville have min skærm skulle have en max width 1200px */
+/* fået hjælp af chatgpt nogle noter fra gamle opgaver, da jeg gerne ville have min skærm skulle have en max width 1200px */
 
 main {
   width: 100%;
@@ -24,13 +38,9 @@ main {
   padding: 20px; /* Tilføjelse af indvendig plads kan også hjælpe med at vise baggrundsfarven */
 }
 
-img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
 /****************************** HEADER  ********************************/
+
+/* både burgermenu og menu taget fra tema opgave virksomhed, og fået hjælp af EMilie fra klassen. */
 
 header {
   display: flex;
@@ -139,7 +149,7 @@ nav {
   }
 }
 
-/* ******footer*****' */
+/* *************************'***footer**********************************' */
 
 footer {
   display: flex;
@@ -179,7 +189,7 @@ p {
   font-family: "Arapey", serif;
 }
 
-/**************' til på flere sider**************** */
+/**************' generelle**************** */
 
 /*giver plads på mobilsite */
 
@@ -357,20 +367,55 @@ af: Alex Raven */
 
 .u_1-1 {
   display: grid;
-  grid-template-columns: 1fr 1fr;
   gap: 10px;
   margin-bottom: 10px;
   margin-top: 22px;
 }
 
+.u_1-1-1-1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
 /* ******** 04 mobilsite**************** */
+.tema04_1-1 {
+  margin-top: 3rem;
+  padding: 0 20px;
+  line-height: 2;
+  display: grid;
+  gap: 50px;
+}
+
+.a1,
+img {
+  margin: 0 0 18px; /* TJEK: jeg satte 0 0 som er ude i siderne også 18px som er billedets bund. TJEK OP. hvorfor kan jeg ikke bruge det på nogle af de andre koder*/
+}
+
+.a2 img {
+  margin: 0 0 18px; /* TJEK: jeg satte 0 0 som er ude i siderne også 18px som er billedets bund. TJEK OP */
+}
+
+.a3 img {
+  margin: 0 0 18px; /* TJEK: jeg satte 0 0 som er ude i siderne også 18px som er billedets bund. TJEK OP */
+}
+
+.a1 p {
+  margin: 0 0 18px;
+}
+
+.a2 p {
+  margin: 0 0 18px;
+}
+
+.a3 p {
+  margin: 0 0 18px;
+}
 
 /* ************05 movilsite ****************** */
 
 /* *********'om mig mobilsite **********************' */
 
 /*----------------------------------- desktop------------------------------------- */
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 800px) {
   /************************** header**************************/
 
   header {
@@ -435,6 +480,12 @@ af: Alex Raven */
     margin-top: 143px;
     margin-bottom: -11px;
     margin-left: 199px;
+  }
+
+  .rum2 {
+    margin-bottom: 28px;
+    margin-top: 158px;
+    margin-left: 141px;
   }
 
   .overskrift2 {
@@ -790,6 +841,70 @@ af: Alex Raven */
 
   /* ***********************03********************************************** */
 
+  .tema03_1-1 {
+    margin-top: -2rem; /*  får rykket lidt ned på selve siden, så det ikke lå lige op af overskriften */
+    padding: 23px;
+    margin-left: -17px;
+  }
+
   .u0 {
+    margin: 5px;
+    padding: 9px;
+    margin-bottom: 76px;
+  }
+
+  .u1 {
+    margin: 5px;
+    padding: 9px;
+    margin-bottom: 6rem;
+  }
+  .u1 p,
+  .u2 p,
+  .u3 p,
+  .u4 p {
+    background-color: #eceaea;
+    margin-top: 2px;
+    margin-bottom: 0px;
+    font-size: 17px;
+    text-align: center;
+    padding: 10px; /* Tilføjer polstring omkring teksten */
+    display: inline-block; /* Gør teksten kun så bred som dens indhold */
+  }
+  .u_1-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .u_1-1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 10px;
+    margin-top: 22px;
+  }
+  .u2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 10px;
+    padding: 2px;
+    gap: 44px;
+  }
+
+  .u_1-1-1-1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+  }
+
+  .u3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 45px;
+  }
+
+  .u4 {
+    margin: 10px;
+    padding: 2px;
+    margin-top: 137px;
+    display: grid;
   }
 }
