@@ -23,7 +23,7 @@ body {
   margin: 0; /* Fjerner standardmargen */
   padding: 0; /* Fjerner standardpadding */
   overflow-x: hidden;
-  background-color: #a9a9a9; /* Baggrund uden for 1200px */
+  background-color: #f6f6f6; /* Baggrund uden for 1200px */
 }
 
 /* fået hjælp af chatgpt nogle noter fra gamle opgaver, da jeg gerne ville have min skærm skulle have en max width 1200px */
@@ -203,49 +203,13 @@ p {
   margin-top: 47px;
 }
 
-/************************************ HALVCIRKEL OG FIRKANT ************************************ */
-
-.container {
-  position: absolute;
-  width: 200px;
-  height: 200px;
-}
-
-.halvcirkel {
-  width: 161%;
-  position: relative;
-  top: 166px;
-  left: 51px;
-}
-
-.ramme {
-  position: absolute;
-  top: 178px;
-  width: 156%;
-  left: 60px;
-}
+/* tagget for at fjerne noget på mobilsite HUSK OG SLETTE DENNE */
 
 @media only screen and (max-width: 800px) {
   /* Skjul intro_ramme på mobilen */
   .intro {
     display: none;
   }
-}
-
-/* ****************************STJERNER - forside******************************* */
-
-.stjerne1 {
-  position: absolute;
-  top: 63px;
-  left: 22rem;
-  width: 44px;
-}
-
-.stjerne2 {
-  position: absolute;
-  top: 63px;
-  left: 24rem;
-  width: 18px;
 }
 
 /*********************************tekst ********************************/
@@ -906,5 +870,92 @@ img {
     padding: 2px;
     margin-top: 137px;
     display: grid;
+  }
+
+  /****************************************** 04****************************' */
+  .tema04_1-1 {
+    margin-top: 10rem;
+  }
+
+  .a0 {
+    margin-bottom: 11rem;
+    margin: 10px;
+  }
+
+  .a1_h1 {
+    display: flex;
+    justify-content: center;
+    margin-left: -26rem;
+    margin-bottom: -3rem;
+  }
+
+  .a1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /* jeg giver dem 3 kolonner, for at gøre mine billeder mindre og det giver lidt mere plads. */
+    margin: 10px;
+    gap: 15px;
+    margin-bottom: 148px;
+  }
+
+  .a_1 {
+    grid-row: 1 / span 2;
+    grid-column: 1 / span 2; /* den fylder to kolonner og to rækker, det gør at teksten bliver fyldt mere ud */
+    margin: 50px;
+    margin-top: 38px;
+    padding: 12px;
+  }
+
+  .a_img1 {
+    grid-row: 1;
+    grid-column: 3;
+  }
+
+  .a_img11 {
+    grid-row: 2;
+    grid-column: 2;
+  }
+
+  .a_img111 {
+    grid-row: 2;
+    grid-column: 3;
+  }
+
+  .a2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 136px;
+  }
+
+  .a_2 {
+    display: grid;
+    gap: 10px;
+    margin: 17px;
+    padding: 10px;
+    grid-column: 1 / span 2;
+    margin-top: -5px;
+  }
+
+  .a3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 136px;
+  }
+
+  .a_3 {
+    display: grid;
+    grid-column: 2 / span 2; /* skal have forklaret dette  */
+    margin: 10px;
+    margin-bottom: 10px;
+    gap: 15px;
+    margin-bottom: 73px;
+  }
+
+  .a_img3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    grid-row: 1 / span 2; /* skal have forklaret dette, fordi jeg har bare leget mig lidt frem via hjælpe øvelserne på fronter  */
   }
 }
