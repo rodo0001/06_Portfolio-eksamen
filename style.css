@@ -12,18 +12,25 @@ img {
   display: block;
 }
 
-@media only screen and (max-width: 767px) {
+video {
+  max-width: 100%; /* Sørger for, at videoen tilpasser sig containerens bredde */
+  height: auto; /* Bevarer videoens proportioner */
+  display: block; /* Forhindre eventuelle ekstra mellemrum omkring videoen */
+  margin: 0 auto; /* Centrerer videoen på skærmen */
+}
+
+/* @media only screen and (max-width: 767px) {
   img {
     width: 100%;
   }
-}
+} */
 
 /* fået hjælp af chatgpt, da jeg gerne ville have min skærm skulle have en max width 1200px */
 body {
   margin: 0; /* Fjerner standardmargen */
   padding: 0; /* Fjerner standardpadding */
   overflow-x: hidden;
-  background-color: #f6f6f6; /* Baggrund uden for 1200px */
+  background-color: #dedede; /* Baggrund uden for 1200px */
 }
 
 /* fået hjælp af chatgpt nogle noter fra gamle opgaver, da jeg gerne ville have min skærm skulle have en max width 1200px */
@@ -193,11 +200,13 @@ p {
 
 /*giver plads på mobilsite */
 
+/*giver plads hvis h1 er udenfor i div */
 .rum {
   margin-top: 71px;
   margin-bottom: -13px;
 }
 
+/*giver plads hvis h1 er inden i div */
 .rum2 {
   margin-bottom: 16px;
   margin-top: 47px;
@@ -212,22 +221,49 @@ p {
   }
 }
 
-/*********************************tekst ********************************/
+/*********************************forside********************************/
+
+.body_forside {
+  background-color: #e0e0e0;
+}
+
+.main_forside {
+  background-color: #a79e9e;
+}
+
+.alt {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+  color: white;
+}
+
+.alt0 {
+  display: grid;
+  grid-row: 6;
+  grid-column: 1;
+  font-size: 6rem;
+}
+
+.alt1 {
+  display: grid;
+  grid-column: 2;
+  grid-row: 6;
+  font-size: 12px;
+  margin-top: 27px;
+}
 
 .Port {
-  position: absolute;
-  top: 5rem;
+  display: grid;
+  grid-row: 2;
   font-size: 5rem;
-  left: 3rem;
-  color: #625346;
 }
 
 .folio {
-  position: absolute;
-  top: 25rem;
+  display: grid;
+  grid-row: 4;
+  grid-column: 2;
   font-size: 5rem;
-  left: 17rem;
-  color: #4c4036;
 }
 
 /************** mobilsite portfolio **********/
@@ -235,6 +271,9 @@ p {
 /* indholdsfortegnelse er taget fra codepen "Wiki TOC Enumeration with CSS Counters"
 af: Alex Raven */
 .indholdsfortegnelse {
+  display: grid;
+  grid-column: 2;
+  grid-row: 6;
   line-height: 154px;
   margin-left: 47px;
   background-color: #dad0c6;
@@ -376,6 +415,30 @@ img {
 
 /* ************05 movilsite ****************** */
 
+.tema05_1-1 {
+  margin-top: 3rem;
+  padding: 0 20px;
+  line-height: 2;
+  display: grid;
+  gap: 50px;
+  margin-left: 12px;
+}
+
+.virk3 {
+  gap: 10px;
+  display: grid;
+}
+
+.virk4 {
+  display: grid;
+  gap: 20px;
+}
+
+.virk {
+  display: grid;
+  gap: 20px;
+}
+
 /* *********'om mig mobilsite **********************' */
 
 /*----------------------------------- desktop------------------------------------- */
@@ -482,51 +545,44 @@ img {
   }
 
   /******** forside************ */
+
   .alt {
-    position: absolute;
-    left: 87px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    color: white;
   }
 
-  .container {
-    position: absolute;
-    width: 256px;
-    height: 200px;
-    left: 368px;
+  .alt0 {
+    display: grid;
+    grid-row: 3;
+    grid-column: 1;
+    font-size: 12rem;
+    margin-left: 44px;
   }
 
-  .intro {
-    position: absolute;
-    width: 527px;
-    top: 153px;
+  .alt1 {
+    display: grid;
+    grid-column: 4;
+    grid-row: 3;
+    font-size: 12px;
+    margin-top: 91px;
   }
 
   .Port {
-    position: absolute;
-    top: 7rem;
-    font-size: 6rem;
-    left: 21rem;
-    color: #625346;
+    font-size: 8rem;
+    display: grid;
+    grid-row: 1;
+    grid-column: 2;
+    margin-left: -80px;
+    margin-top: 66px;
   }
 
   .folio {
-    position: absolute;
-    top: 15rem;
-    font-size: 5rem;
-    left: 21rem;
-    color: #4c4036;
-  }
-
-  .stjerne1 {
-    position: absolute;
-    top: 126px;
-    left: 57rem;
-    width: 44px;
-  }
-  .stjerne2 {
-    position: absolute;
-    top: 120px;
-    left: 59rem;
-    width: 18px;
+    display: grid;
+    grid-row: 2;
+    grid-column: 3;
+    font-size: 8rem;
   }
 
   /* hjælp fra chatgpt */
@@ -549,7 +605,7 @@ img {
     left: -393px;
   }
 
-  /* ***************************************Portfolio ***************************************************/
+  /* ***************************************Portfolio *************************************************/
 
   /*****fået hjælp af: https://www.youtube.com/watch?v=7HPsdVQhpRw og Chatgpt**** */
   .portfolio {
