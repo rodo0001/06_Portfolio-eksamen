@@ -30,7 +30,7 @@ body {
   margin: 0; /* Fjerner standardmargen */
   padding: 0; /* Fjerner standardpadding */
   overflow-x: hidden;
-  background-color: #dedede; /* Baggrund uden for 1200px */
+  background-color: #f6f6f6; /* Baggrund uden for 1200px */
 }
 
 /* fået hjælp af chatgpt nogle noter fra gamle opgaver, da jeg gerne ville have min skærm skulle have en max width 1200px */
@@ -224,11 +224,11 @@ p {
 /*********************************forside********************************/
 
 .body_forside {
-  background-color: #e0e0e0;
+  background-color: #cccccc;
 }
 
 .main_forside {
-  background-color: #a79e9e;
+  background-color: #cccccc;
 }
 
 .alt {
@@ -416,8 +416,6 @@ img {
 /* ************05 movilsite ****************** */
 
 .tema05_1-1 {
-  margin-top: 3rem;
-  padding: 0 20px;
   line-height: 2;
   display: grid;
   gap: 50px;
@@ -440,6 +438,13 @@ img {
 }
 
 /* *********'om mig mobilsite **********************' */
+
+.om_mig {
+  margin-top: 3rem;
+  padding: 0 20px;
+  display: grid;
+  gap: 50px;
+}
 
 /*----------------------------------- desktop------------------------------------- */
 @media screen and (min-width: 800px) {
@@ -519,7 +524,7 @@ img {
     display: flex;
     flex-direction: column;
     font-size: 23px;
-    margin-top: 8rem;
+    margin-top: 3rem;
     align-items: center;
     font-family: "Antic Didone", serif;
   }
@@ -546,43 +551,16 @@ img {
 
   /******** forside************ */
 
+  .body_forside main {
+    width: 100%;
+    background-color: #cccccc;
+    max-width: none;
+    padding: 0;
+  }
+
   .alt {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
-    color: white;
-  }
-
-  .alt0 {
-    display: grid;
-    grid-row: 3;
-    grid-column: 1;
-    font-size: 12rem;
-    margin-left: 44px;
-  }
-
-  .alt1 {
-    display: grid;
-    grid-column: 4;
-    grid-row: 3;
-    font-size: 12px;
-    margin-top: 91px;
-  }
-
-  .Port {
-    font-size: 8rem;
-    display: grid;
-    grid-row: 1;
-    grid-column: 2;
-    margin-left: -80px;
-    margin-top: 66px;
-  }
-
-  .folio {
-    display: grid;
-    grid-row: 2;
-    grid-column: 3;
-    font-size: 8rem;
+    display: flex;
+    justify-content: center;
   }
 
   /* hjælp fra chatgpt */
@@ -871,6 +849,7 @@ img {
     margin: 5px;
     padding: 9px;
     margin-bottom: 76px;
+    margin-top: 9rem;
   }
 
   .u1 {
@@ -1013,5 +992,178 @@ img {
     grid-template-columns: 1fr 1fr;
     gap: 10px;
     grid-row: 1 / span 2; /* skal have forklaret dette, fordi jeg har bare leget mig lidt frem via hjælpe øvelserne på fronter  */
+  }
+  /* *******************'05*********************************************************** */
+
+  .tema05_1-1 {
+    margin-top: 3rem;
+    padding: 0 20px;
+    line-height: 2;
+    display: grid;
+    gap: 8rem;
+    margin-left: 12px;
+  }
+
+  .virk0 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 20px;
+    padding: 12px;
+    gap: 10px;
+    margin-top: 9rem;
+  }
+
+  .virk0_p1 {
+    display: grid;
+    margin: 22px;
+    padding: 29px;
+    text-align: center;
+  }
+
+  .virk1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 20px;
+    padding: 12px;
+    gap: 10px;
+  }
+
+  .virk1_p1 {
+    display: grid;
+    grid-column: 2 / span 2;
+    margin: 78px;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .virk2 {
+    margin: 20px;
+    padding: 12px;
+    gap: 10px;
+    display: grid;
+    margin-bottom: -9rem;
+  }
+
+  .virk3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    margin: 20px;
+    padding: 12px;
+    gap: 14px;
+  }
+
+  .virk3_p1 {
+    display: grid;
+    grid-row: 1;
+    grid-column: 3 / span 2;
+    margin-top: 4rem;
+    text-align: center;
+    margin: 41px;
+  }
+
+  .virk3_img1 {
+    display: grid;
+    grid-column: 1 / span 2;
+    grid-row: 1;
+  }
+
+  .virk3_img2 {
+    display: grid;
+    grid-row: 2 / span 2;
+    grid-column: 3 / span 2;
+  }
+
+  .virk3_img3 {
+    display: grid;
+    grid-row: 2 / span 2;
+    grid-column: 1 / span 2;
+  }
+
+  .virk4 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    margin: 20px;
+    padding: 12px;
+  }
+
+  .virk4_img1 {
+    display: grid;
+    grid-column: 3;
+  }
+
+  .virk4_p1 {
+    grid-column: 1 / span 2;
+    margin-top: 4rem;
+    padding: 6px;
+    text-align: center;
+  }
+
+  .virk5 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 10px;
+    margin: 20px;
+    padding: 12px;
+  }
+  .virk5_p1 {
+    display: grid;
+    grid-column: 3 / span 2;
+    display: grid;
+    grid-column: 3 / span 2;
+    text-align: center;
+    margin: 30px;
+    padding: 12px;
+  }
+
+  .virk5_img1 {
+    display: grid;
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .virk5_img2 {
+    display: grid;
+    grid-column: 2;
+    grid-row: 1;
+  }
+  /* ***********om mig**********'*********************************************** */
+  .om_mig {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    margin: 20px;
+    padding: 20px;
+  }
+
+  .om_mig_img1 {
+    display: grid;
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .om_mig_p1 {
+    display: grid;
+    grid-column: 2 / span 3;
+    grid-row: 2 / span 2;
+  }
+
+  .punkt1 {
+    display: grid;
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .punkt2 {
+    display: grid;
+    grid-column: 1;
+    grid-row: 3;
+  }
+
+  .punkt3 {
+    display: grid;
+    grid-column: 1;
+    grid-row: 4;
   }
 }
