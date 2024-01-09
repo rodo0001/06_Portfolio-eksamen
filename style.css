@@ -19,12 +19,6 @@ video {
   margin: 0 auto; /* Centrerer videoen på skærmen */
 }
 
-/* @media only screen and (max-width: 767px) {
-  img {
-    width: 100%;
-  }
-} */
-
 /* fået hjælp af chatgpt, da jeg gerne ville have min skærm skulle have en max width 1200px */
 body {
   margin: 0; /* Fjerner standardmargen */
@@ -54,8 +48,7 @@ header {
   justify-content: flex-end; /* Placerer menuen til højre */
   align-items: center;
   padding: 20px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  font-family: "poppins", sans-serif;
+  font-family: "Arapey", serif;
   font-weight: 100;
   font-style: normal;
 }
@@ -84,14 +77,14 @@ nav {
 .menu a {
   display: block;
   padding: 10px;
-  color: #6d3636;
+  color: #000000;
   text-decoration: none;
   transition: color 0.3s;
   text-align: end;
 }
 
 .menu a:hover {
-  color: #f0a1a1;
+  color: #2d737d;
 }
 
 .burger {
@@ -104,7 +97,7 @@ nav {
 .burger .line {
   width: 100%;
   height: 2px;
-  background-color: #6d3636;
+  background-color: #000000;
   margin-bottom: 5px;
   transition: 0.2s linear;
 }
@@ -141,7 +134,7 @@ nav {
     position: absolute;
     top: 60px;
     right: 0; /* Placerer menuen i toppen til højre */
-    background-color: #efede6;
+    background-color: #eaeaea;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     z-index: 1;
   }
@@ -154,6 +147,14 @@ nav {
     font-size: 24px;
     text-align: right;
   }
+
+  html {
+    background-color: #cccccc;
+  }
+
+  .footerindex p {
+    display: none;
+  }
 }
 
 /* *************************'***footer**********************************' */
@@ -162,7 +163,7 @@ footer {
   display: flex;
   justify-content: center;
   color: white;
-  background-color: #a79e9e;
+  background-color: #cccccc;
 }
 
 /* **************** Skrift typer************ */
@@ -171,7 +172,7 @@ footer {
   display: flex;
   flex-direction: column;
   font-size: 23px;
-  margin-top: 8rem;
+  margin-top: 1rem;
   align-items: center;
   font-family: "Antic Didone", serif;
 }
@@ -212,6 +213,24 @@ p {
   margin-top: 47px;
 }
 
+.link_tilsiden {
+  padding-top: 10px;
+  text-align: center;
+  font-size: 20px;
+}
+.link_tilsiden a {
+  color: black;
+}
+
+.link_tilsiden2 {
+  padding-top: 10px;
+  text-align: center;
+  font-size: 20px;
+}
+.link_tilsiden2 a {
+  color: black;
+}
+
 /* tagget for at fjerne noget på mobilsite HUSK OG SLETTE DENNE */
 
 @media only screen and (max-width: 800px) {
@@ -219,120 +238,43 @@ p {
   .intro {
     display: none;
   }
+  .forside_billede {
+    display: none;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .forsidetekst {
+    display: none;
+  }
+
+  .forside_billede {
+    display: none;
+  }
+  html {
+    background-color: #cccccc;
+  }
 }
 
 /*********************************forside********************************/
 
-.body_forside {
-  background-color: #cccccc;
+.forsidetekst h1 {
+  font-size: 2.7cm;
+  margin-top: 6cm;
+  text-align: center;
+  font-family: "indie", sans-serif;
 }
-
-.main_forside {
+.body_forside main {
+  width: 100%;
   background-color: #cccccc;
+  max-width: none;
+  padding: 0;
 }
 
 .alt {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
-  color: white;
+  display: flex;
+  justify-content: center;
 }
 
-.alt0 {
-  display: grid;
-  grid-row: 6;
-  grid-column: 1;
-  font-size: 6rem;
-}
-
-.alt1 {
-  display: grid;
-  grid-column: 2;
-  grid-row: 6;
-  font-size: 12px;
-  margin-top: 27px;
-}
-
-.Port {
-  display: grid;
-  grid-row: 2;
-  font-size: 5rem;
-}
-
-.folio {
-  display: grid;
-  grid-row: 4;
-  grid-column: 2;
-  font-size: 5rem;
-}
-
-/************** mobilsite portfolio **********/
-
-/* indholdsfortegnelse er taget fra codepen "Wiki TOC Enumeration with CSS Counters"
-af: Alex Raven */
-.indholdsfortegnelse {
-  display: grid;
-  grid-column: 2;
-  grid-row: 6;
-  line-height: 154px;
-  margin-left: 47px;
-  background-color: #dad0c6;
-  margin-right: 59px;
-  margin-top: 52px;
-}
-
-.indholdsfortegnelse ul {
-  list-style: none;
-}
-
-.indholdsfortegnelse a {
-  border-bottom: 1px dashed transparent;
-  color: #888;
-  font-size: 17px;
-  font-style: italic;
-  font-weight: normal;
-  margin-left: 10px;
-  text-decoration: none;
-  transition: all 0.2s linear 0s;
-}
-
-.indholdsfortegnelse a:hover {
-  border-bottom: 1px dashed #ddd;
-  color: #000;
-}
-
-.overskrift {
-  position: relative;
-  top: 24px;
-  left: 156px;
-  color: #aaa;
-  font-size: 30px;
-  line-height: 40px;
-  font-style: italic;
-  font-weight: 200;
-  text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.7);
-}
-
-@media only screen and (min-width: 800px) {
-  /* Skjul kasse på desktop */
-  .kasse {
-    display: none;
-  }
-}
-
-@media only screen and (max-width: 800px) {
-  /* Skjul wrapper på mobilen */
-  .wrapper {
-    display: none;
-  }
-}
-
-@media only screen and (max-width: 800px) {
-  /* Skjul blaa på mobilen */
-  .blaa {
-    display: none;
-  }
-}
 /******** mobilsite tema 02****** */
 
 .tema02_1-1 {
@@ -340,10 +282,6 @@ af: Alex Raven */
   padding: 0 20px; /* Tilføjer polstring på siderne for at skabe plads til indholdet */
   line-height: 2;
   box-sizing: border-box; /* Sikrer, at padding inkluderes i elementets bredde */
-}
-
-.web3 img {
-  width: 300px; /* tager fat i alle billeder under klassen web3 */
 }
 
 .img3 {
@@ -444,6 +382,92 @@ img {
   padding: 0 20px;
   display: grid;
   gap: 50px;
+  grid-template-columns: 1fr;
+  line-height: 1.6rem;
+}
+
+.om_mig .venstre_side {
+  position: relative;
+  background-color: #eceaea;
+  padding: 48px;
+}
+
+.om_mig_p1 {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 20px;
+  border-bottom: 2px solid;
+  line-height: 1.6rem;
+}
+
+.punkt1 {
+  padding-top: 35px;
+  font-family: "Arapey", serif;
+}
+
+.punkt2 {
+  padding-top: 35px;
+  font-family: "Arapey", serif;
+}
+
+.punkt3 {
+  padding-top: 35px;
+  font-family: "Arapey", serif;
+}
+
+.personlig_overskrift {
+  color: black;
+
+  font-weight: 600;
+
+  margin-bottom: 11px;
+  padding-bottom: 5px;
+}
+
+.skills_overskift {
+  color: black;
+
+  font-weight: 600;
+
+  margin-bottom: 11px;
+  padding-bottom: 5px;
+}
+
+.interesser_overskrift {
+  color: black;
+
+  font-weight: 600;
+
+  margin-bottom: 11px;
+  padding-bottom: 5px;
+}
+.om_mig .højre_side {
+  position: relative;
+  background-color: #eceaea;
+  padding: 48px;
+}
+.første_semester {
+  padding-top: 30px;
+}
+.fremtid {
+  padding-top: 30px;
+}
+.om_mig_title {
+  font-family: "Kalnia", serif;
+}
+
+.semester_title {
+  font-family: "Kalnia", serif;
+}
+
+.fremtid_title {
+  font-family: "Kalnia", serif;
+}
+
+dt {
+  font-weight: 800;
 }
 
 /*----------------------------------- desktop------------------------------------- */
@@ -455,12 +479,13 @@ img {
     justify-content: flex-end; /* Placerer menuen til højre */
     align-items: center;
     padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     font-family: "poppins", sans-serif;
     font-weight: 100;
     font-style: normal;
   }
-
+  .forsidetekst {
+    display: none;
+  }
   nav {
     display: flex;
     margin: 0 auto;
@@ -485,14 +510,14 @@ img {
   .menu a {
     display: block;
     padding: 10px;
-    color: #6d3636;
+    color: #000000;
     text-decoration: none;
     transition: color 0.3s;
     text-align: end;
   }
 
   .menu a:hover {
-    color: #f0a1a1;
+    color: #2d737d;
   }
 
   /************************' footer  *************************/
@@ -523,17 +548,17 @@ img {
   .overskrift2 {
     display: flex;
     flex-direction: column;
-    font-size: 23px;
+    font-size: 24px;
     margin-top: 3rem;
     align-items: center;
     font-family: "Antic Didone", serif;
   }
 
   .overskrift3 {
-    font-size: 16px;
+    font-size: 19px;
     align-items: center;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
   }
 
   h1 {
@@ -547,6 +572,19 @@ img {
 
   p {
     font-family: "Arapey", serif;
+  }
+
+  /* ----------------Hover --------- */
+
+  .img1 {
+    filter: grayscale(1) brightness(0.5);
+    /* border-radius: 5px; gør kanterne lidt runde*/
+    cursor: pointer;
+    transition: 0.3s linear;
+  }
+
+  .img1:hover {
+    filter: grayscale(0);
   }
 
   /******** forside************ */
@@ -563,129 +601,20 @@ img {
     justify-content: center;
   }
 
-  /* hjælp fra chatgpt */
-  .custom-line1 {
-    border: none; /* Fjern standardborderet */
-    border-top: 2px solid #5d4f42; /* Ændr tykkelsen, stilen og farven efter ønske */
-    width: 62%; /* Ændr bredden af linjen efter ønske */
-    float: right;
-    position: relative;
-    top: 5rem;
-    left: 29rem;
-  }
-
-  .custom-line2 {
-    border: none; /* Fjern standardborderet */
-    border-top: 2px solid #5d4f42; /* Ændr tykkelsen, stilen og farven efter ønske */
-    width: 69%;
-    position: relative;
-    top: 661px;
-    left: -393px;
-  }
-
-  /* ***************************************Portfolio *************************************************/
-
-  /*****fået hjælp af: https://www.youtube.com/watch?v=7HPsdVQhpRw og Chatgpt**** */
-  .portfolio {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-  }
-
-  .wrapper {
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-
-  .carousel-container {
-    position: relative;
-    overflow: hidden; /* Sørg for at skjule knapper, der går ud over containerens bredde */
-  }
-
-  #prevBtn {
-    /* Stil for venstre knap */
-    height: 46px;
-    width: 46px;
-    text-align: center;
-    list-style: none;
-    line-height: 46px;
-    background-color: #ddd;
-    cursor: pointer;
-    font-size: 1.2rem;
-    position: absolute;
-    border-radius: 50%;
-    top: 50%;
-    transform: translateY(-50%);
-    left: 14rem;
-    z-index: 1;
-  }
-
-  #nextBtn {
-    /* Stil for højre knap */
-    height: 46px;
-    width: 46px;
-    text-align: center;
-    list-style: none;
-    line-height: 46px;
-    background-color: #ddd;
-    cursor: pointer;
-    font-size: 1.2rem;
-    position: absolute;
-    border-radius: 50%;
-    top: 50%;
-    transform: translateY(-50%); /* Centrerer lodret */
-    right: 19rem;
-    z-index: 1; /* Sørger for at knappen ligger over billeder */
-  }
-
-  .carousel {
-    display: flex;
-    gap: 5px;
-    cursor: pointer;
-    overflow: hidden;
-    position: relative;
-    top: 186px;
-    left: -19%;
-    transition: transform 0.5s ease; /* Tilføjer en glidende overgang til rulning */
-    transform: translateX(0); /* Startposition */
-    /* Juster denne værdi efter behov */
-  }
-
-  .wrapper .carousel {
-    display: flex;
-    justify-content: space-between;
-    gap: 5px;
-    cursor: pointer;
-    overflow: hidden;
-    position: relative;
-    left: -212px;
-  }
-  .carousel img {
-    width: 260px;
-    height: auto;
-  }
-
-  .carousel img:first-child {
-    margin-left: 410px;
-  }
-  /* ----------------------------------------------------- */
-
-  /* firkant */
-  .firkant {
-    background-color: #dad0c6;
-    padding: 2rem 1.5rem;
-    margin-top: 19rem;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .img_om_mig {
-    width: 228px;
-    margin-left: 133px;
-  }
-
   /*******************************************02********************************************** */
+  /* knappen  */
+  .link_tilsiden {
+    color: black;
+
+    padding-top: 10px;
+    text-align: center;
+    font-size: 20px;
+    border-radius: 25px;
+  }
+
+  .link_tilsiden a {
+    color: black;
+  }
 
   .tema02_1-1 {
     margin-top: -2rem; /*  får rykket lidt ned på selve siden, så det ikke lå lige op af overskriften */
@@ -695,28 +624,20 @@ img {
   .grund_web {
     margin-left: 25rem;
   }
+  .grund_p1 {
+    background-color: #eceaea;
+  }
+
   .web1 {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    margin-top: 66px;
+    padding-top: 9rem;
+    padding-bottom: 20px;
     /* tekst */
     text-align: center; /* får teksten til at starte i midten, og ikke ude i siden  */
-
     line-height: 3; /* mellemrum mellem linjerne  */
     font-size: 17px;
     gap: 20px;
-  }
-
-  .web1 p {
-    background-color: #eceaea;
-    margin-top: 2px; /* så baggrundsfarven blev lige med billedet*/
-    margin-bottom: 0px; /* så baggrundsfarven blev lige med billedet*/
-    margin-left: 12px;
-  }
-
-  .web1 img {
-    width: 499px;
-    margin-left: 56px;
   }
 
   /* ---- */
@@ -724,30 +645,20 @@ img {
   .web2 {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    margin-top: 66px;
-    line-height: 3; /* mellemrum mellem linjerne  */
     font-size: 17px;
     gap: 20px;
     text-align: center;
+    padding-top: 12rem;
   }
 
   .web2 p {
-    background-color: #eceaea;
     margin-top: 2px; /* så baggrundsfarven blev lige med billedet*/
     margin-bottom: 0px; /* så baggrundsfarven blev lige med billedet*/
-    margin-left: -26px;
+    background-color: #eceaea;
   }
-  .web2 img {
-    width: 499px;
-    margin-left: 10px;
-  }
-  .stil {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 207px;
-    margin-left: 35rem;
-    margin-bottom: -28px;
+
+  .stil_p1 {
+    background-color: #eceaea;
   }
 
   .order {
@@ -758,83 +669,19 @@ img {
 
   .web3 {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 2fr 1fr 1fr;
     margin-top: 66px;
-    line-height: 3; /* mellemrum mellem linjerne  */
     font-size: 17px;
     text-align: center;
+    gap: 17px;
+    padding-top: 12rem;
   }
 
-  .web3 p {
+  .knappen_p1 {
+    margin: 17px;
+    padding: 10px;
+    padding-bottom: 0px;
     background-color: #eceaea;
-    margin-top: 2px; /* så baggrundsfarven blev lige med billedet*/
-    margin-bottom: 0px; /* så baggrundsfarven blev lige med billedet*/
-    width: 197%; /* Justeret størelsen på kassen*/
-    margin-left: 12px;
-  }
-
-  .knap {
-    margin-top: 207px;
-    margin-left: 7rem;
-    margin-bottom: -28px;
-  }
-
-  .web3 img {
-    margin-left: 268px; /* rykker billederne mere til venstre */
-  }
-
-  .web3 .img3 {
-    margin-right: 56px; /* Juster denne værdi for at reducere mellemrummet */
-  }
-
-  .web3 .img4 {
-    margin-left: -33px; /* Juster denne værdi for at reducere mellemrummet */
-  }
-
-  /* ----------------Hover --------- */
-
-  .img1 {
-    filter: grayscale(1) brightness(0.5);
-    /* border-radius: 5px; gør kanterne lidt runde*/
-    cursor: pointer;
-    transition: 0.3s linear;
-  }
-
-  .img1:hover {
-    filter: grayscale(0);
-  }
-
-  .img2 {
-    filter: grayscale(1) brightness(0.5);
-    /* border-radius: 5px; gør kanterne lidt runde*/
-    cursor: pointer;
-    transition: 0.3s linear;
-  }
-
-  .img2:hover {
-    filter: grayscale(0);
-  }
-
-  .img3 {
-    filter: grayscale(1) brightness(0.5);
-    /* border-radius: 5px; gør kanterne lidt runde*/
-    cursor: pointer;
-    transition: 0.3s linear;
-  }
-
-  .img3:hover {
-    filter: grayscale(0);
-  }
-
-  .img4 {
-    filter: grayscale(1) brightness(0.5);
-    /* border-radius: 5px; gør kanterne lidt runde*/
-    cursor: pointer;
-    transition: 0.3s linear;
-  }
-
-  .img4:hover {
-    filter: grayscale(0);
   }
 
   /* ***********************03********************************************** */
@@ -933,11 +780,13 @@ img {
   }
 
   .a_1 {
-    grid-row: 1 / span 2;
+    grid-row: 1 / span 1;
     grid-column: 1 / span 2; /* den fylder to kolonner og to rækker, det gør at teksten bliver fyldt mere ud */
     margin: 50px;
     margin-top: 38px;
     padding: 12px;
+    background-color: #eceaea;
+    text-align: center;
   }
 
   .a_img1 {
@@ -947,12 +796,16 @@ img {
 
   .a_img11 {
     grid-row: 2;
-    grid-column: 2;
+    grid-column: 3;
   }
 
   .a_img111 {
     grid-row: 2;
     grid-column: 3;
+  }
+  .a_img111 {
+    grid-row: 2;
+    grid-column: 2;
   }
 
   .a2 {
@@ -969,6 +822,8 @@ img {
     padding: 10px;
     grid-column: 1 / span 2;
     margin-top: -5px;
+    background-color: #eceaea;
+    text-align: center;
   }
 
   .a3 {
@@ -985,6 +840,8 @@ img {
     margin-bottom: 10px;
     gap: 15px;
     margin-bottom: 73px;
+    background-color: #eceaea;
+    text-align: center;
   }
 
   .a_img3 {
@@ -1018,6 +875,7 @@ img {
     margin: 22px;
     padding: 29px;
     text-align: center;
+    background-color: #eceaea;
   }
 
   .virk1 {
@@ -1034,6 +892,7 @@ img {
     margin: 78px;
     padding: 10px;
     text-align: center;
+    background-color: #eceaea;
   }
 
   .virk2 {
@@ -1060,6 +919,7 @@ img {
     margin-top: 4rem;
     text-align: center;
     margin: 41px;
+    background-color: #eceaea;
   }
 
   .virk3_img1 {
@@ -1098,6 +958,7 @@ img {
     margin-top: 4rem;
     padding: 6px;
     text-align: center;
+    background-color: #eceaea;
   }
 
   .virk5 {
@@ -1115,6 +976,7 @@ img {
     text-align: center;
     margin: 30px;
     padding: 12px;
+    background-color: #eceaea;
   }
 
   .virk5_img1 {
@@ -1129,41 +991,106 @@ img {
     grid-row: 1;
   }
   /* ***********om mig**********'*********************************************** */
+
+  /* fået hjælp af: https://www.youtube.com/watch?v=hnjHCmaUVPg */
+
   .om_mig {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    min-height: 1000px;
+    background: #f6f6f6;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-    margin: 20px;
-    padding: 20px;
+    grid-template-columns: 1fr 2fr;
   }
 
-  .om_mig_img1 {
-    display: grid;
-    grid-column: 1;
-    grid-row: 1;
+  .om_mig .venstre_side {
+    position: relative;
+    background-color: #eceaea;
+    padding: 48px;
   }
 
   .om_mig_p1 {
-    display: grid;
-    grid-column: 2 / span 3;
-    grid-row: 2 / span 2;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 2px solid;
   }
 
   .punkt1 {
-    display: grid;
-    grid-column: 1;
-    grid-row: 2;
+    padding-top: 35px;
   }
 
   .punkt2 {
-    display: grid;
-    grid-column: 1;
-    grid-row: 3;
+    padding-top: 35px;
   }
 
   .punkt3 {
-    display: grid;
-    grid-column: 1;
-    grid-row: 4;
+    padding-top: 35px;
+  }
+
+  .personlig_overskrift {
+    color: black;
+
+    font-weight: 600;
+
+    margin-bottom: 11px;
+    padding-bottom: 5px;
+  }
+
+  .skills_overskift {
+    color: black;
+
+    font-weight: 600;
+
+    margin-bottom: 11px;
+    padding-bottom: 5px;
+  }
+
+  .interesser_overskrift {
+    color: black;
+
+    font-weight: 600;
+
+    margin-bottom: 11px;
+    padding-bottom: 5px;
+  }
+  .om_mig .højre_side {
+    position: relative;
+    background-color: #eceaea;
+    padding: 48px;
+    line-height: 2rem;
+    padding-top: 36px;
+  }
+  .første_semester {
+    padding-top: 30px;
+  }
+
+  .om_mig_title {
+    font-family: "Kalnia", serif;
+  }
+
+  .semester_title {
+    font-family: "Kalnia", serif;
+  }
+
+  .fremtid_title {
+    font-family: "Kalnia", serif;
+  }
+
+  .fremtid {
+    padding-top: 30px;
+  }
+
+  .om_mig_p {
+    padding-top: 10px;
+  }
+  .mit_navn {
+    font-family: "Kalnia", serif;
+  }
+  dt {
+    font-weight: 800;
   }
 }
